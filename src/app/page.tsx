@@ -1,5 +1,6 @@
 // Simple landing with hero, features, steps, and CTA
 import Link from "next/link";
+import Hero from "./components/Hero";
 
 const features = [
   {
@@ -22,43 +23,7 @@ const features = [
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        {/* glow */}
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute -top-24 left-1/2 h-72 w-[60rem] -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-[120px]" />
-        </div>
-
-        <div className="mx-auto max-w-6xl px-4 pt-20 pb-16 md:pt-28 md:pb-24">
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/50 px-3 py-1 text-xs text-neutral-300">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            early prototype
-          </p>
-
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl">
-            Pulse <span className="text-fuchsia-400">syncs your health data</span> and turns it into clear, actionable insights.
-          </h1>
-
-          <p className="mt-6 max-w-2xl text-lg text-neutral-300">
-            Bring all your fitness apps together and let AI highlight progress, plateaus, and next steps—no spreadsheets needed.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/dashboard"
-              className="rounded-xl bg-fuchsia-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-fuchsia-400 transition"
-            >
-              View demo dashboard
-            </Link>
-            <a
-              href="#features"
-              className="rounded-xl border border-neutral-700 px-5 py-3 font-semibold hover:bg-neutral-900 transition"
-            >
-              See features
-            </a>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Features */}
       <section id="features" className="mx-auto max-w-6xl px-4 py-12 md:py-16">
