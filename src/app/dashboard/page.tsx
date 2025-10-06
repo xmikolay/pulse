@@ -32,11 +32,24 @@ export default function Dashboard() {
           <h2 className="text-xl font-semibold">This Week Activity</h2>
           <span className="text-sm text-neutral-400">mock chart</span>
         </div>
-        <div className="grid h-48 grid-cols-7 items-end gap-2">
+        <div className="grid h-48 grid-cols-7 gap-2">
           {/* simple bar “chart” using div heights */}
-          {[30, 52, 80, 60, 40, 95, 20].map((h, i) => (
-            <div key={i} className="rounded-md bg-fuchsia-500/70" style={{ height: `${h}%` }} />
-          ))}
+          {[
+            {day: "Mon", value: 30},
+            {day: "Tue", value: 52},
+            {day: "Wed", value: 80},
+            {day: "Thu", value: 60},
+            {day: "Fri", value: 40},
+            {day: "Sat", value: 95},
+            {day: "Sun", value: 20},
+          ].map((d, i) => (
+            <div key={i} className="flex flex-col items-center justify-end">
+                {/*bar*/}
+                <div className="w-full rounded-md bg-fuchsia-500/70" style={{height: `${d.value}%`}} />
+                {/*label*/}
+                <span className="mt-2 text-xs text-neutral-400">{d.day}</span>
+            </div>
+            ))}
         </div>
       </div>
 
