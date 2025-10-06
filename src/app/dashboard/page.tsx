@@ -1,0 +1,54 @@
+// Lightweight dashboard mock to demo the concept
+// Replace hardcoded data with Supabase queries later.
+export default function Dashboard() {
+  // Mock stats for tomorrow's demo
+  const stats = [
+    { label: "Weekly Workouts", value: 5 },
+    { label: "Total Minutes", value: 342 },
+    { label: "Avg Sleep (h)", value: 7.4 },
+    { label: "Steps (week)", value: "52,310" },
+  ];
+
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
+      <h1 className="text-3xl font-bold">Your Dashboard</h1>
+      <p className="mt-1 text-neutral-300">
+        This is a prototype. Data is static and for illustration only.
+      </p>
+
+      {/* Stat cards */}
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {stats.map((s) => (
+          <div key={s.label} className="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-5">
+            <div className="text-sm text-neutral-400">{s.label}</div>
+            <div className="mt-2 text-2xl font-semibold">{s.value}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Chart placeholder */}
+      <div className="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6">
+        <div className="mb-3 flex items-center justify-between">
+          <h2 className="text-xl font-semibold">This Week Activity</h2>
+          <span className="text-sm text-neutral-400">mock chart</span>
+        </div>
+        <div className="grid h-48 grid-cols-7 items-end gap-2">
+          {/* simple bar “chart” using div heights */}
+          {[30, 52, 80, 60, 40, 95, 20].map((h, i) => (
+            <div key={i} className="rounded-md bg-fuchsia-500/70" style={{ height: `${h}%` }} />
+          ))}
+        </div>
+      </div>
+
+      {/* AI summary placeholder */}
+      <div className="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6">
+        <h2 className="text-xl font-semibold">AI Summary</h2>
+        <p className="mt-2 text-neutral-300">
+          You’ve increased weekly volume by <span className="text-emerald-400 font-semibold">12%</span>.
+          Recovery looks good; consider one additional low-intensity session and aim for
+          <span className="font-semibold"> 7.5–8h</span> sleep to support progression.
+        </p>
+      </div>
+    </div>
+  );
+}
