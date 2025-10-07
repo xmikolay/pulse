@@ -45,7 +45,7 @@ export default function Dashboard() {
           ].map((d, i) => (
             <div key={i} className="flex flex-col items-center justify-end">
                 {/*bar*/}
-                <div className="w-full rounded-md bg-fuchsia-500/70" style={{height: `${d.value}%`}} />
+                <div className="w-full rounded-md bg-red-500/70" style={{height: `${d.value}%`}} />
                 {/*label*/}
                 <span className="mt-2 text-xs text-neutral-400">{d.day}</span>
             </div>

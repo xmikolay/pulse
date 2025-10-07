@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       {/* glow */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 left-1/2 h-72 w-[60rem] -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-[120px]" />
+        <div className="absolute -top-24 left-1/2 h-72 w-[60rem] -translate-x-1/2 rounded-full bg-red-500/20 blur-[120px]" />
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pt-20 pb-16 md:pt-28 md:pb-24">
@@ -28,7 +28,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-4xl font-extrabold tracking-tight sm:text-6xl"
         >
-          Pulse <span className="text-fuchsia-400">syncs your health data</span> and
+          Pulse <span className="text-red-400">syncs your health data</span> and
           turns it into clear, actionable insights.
         </motion.h1>
 
@@ -50,7 +50,7 @@ export default function Hero() {
         >
           <Link
             href="/dashboard"
-            className="rounded-xl bg-fuchsia-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-fuchsia-400 transition"
+            className="rounded-xl bg-red-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-red-400 transition"
           >
             View demo dashboard
           </Link>
