@@ -25,7 +25,6 @@ export default function Home() {
     <>
       <Hero />
 
-      {/* Features */}
       <section id="features" className="mx-auto max-w-6xl px-4 py-12 md:py-16">
         <div className="grid gap-6 md:grid-cols-3">
           {features.map((f) => (
@@ -38,7 +37,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works */}
       <section className="mx-auto max-w-6xl px-4 pb-16">
         <div className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 md:p-8">
           <h2 className="text-2xl font-bold">How Pulse works</h2>

@@ -6,21 +6,11 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* glow */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 left-1/2 h-72 w-[60rem] -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-[120px]" />
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pt-20 pb-16 md:pt-28 md:pb-24">
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="mb-4 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/50 px-3 py-1 text-xs text-neutral-300"
-        >
-          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-          early prototype
-        </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 18, scale: 0.98 }}

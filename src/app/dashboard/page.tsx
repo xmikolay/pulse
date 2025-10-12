@@ -1,7 +1,4 @@
-// Lightweight dashboard mock to demo the concept
-// Replace hardcoded data with Supabase queries later.
 export default function Dashboard() {
-  // Mock stats for tomorrow's demo
   const stats = [
     { label: "Weekly Workouts", value: 5 },
     { label: "Total Minutes", value: 342 },
@@ -16,7 +13,6 @@ export default function Dashboard() {
         This is a prototype. Data is static and for illustration only.
       </p>
 
-      {/* Stat cards */}
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label} className="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-5">
@@ -26,14 +22,12 @@ export default function Dashboard() {
         ))}
       </div>
 
-      {/* Chart placeholder */}
       <div className="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6">
         <div className="mb-3 flex items-center justify-between">
           <h2 className="text-xl font-semibold">This Week Activity</h2>
           <span className="text-sm text-neutral-400">mock chart</span>
         </div>
         <div className="grid h-48 grid-cols-7 gap-2">
-          {/* simple bar “chart” using div heights */}
           {[
             {day: "Mon", value: 30},
             {day: "Tue", value: 52},
@@ -53,7 +47,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* AI summary placeholder */}
       <div className="mt-6 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6">
         <h2 className="text-xl font-semibold">AI Summary</h2>
         <p className="mt-2 text-neutral-300">

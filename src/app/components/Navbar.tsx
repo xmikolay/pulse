@@ -1,5 +1,4 @@
 import Link from "next/link";
-import link from "next/link";
 
 export default function Navbar() {
     return(
@@ -12,7 +11,12 @@ export default function Navbar() {
                 <nav className="hidden items-center gap-6 text-sm md:flex">
                     <a href="/#features" className="text-neutral-300 hover:text-white">Features</a>
                     <Link href="/dashboard" className="text-neutral-300 hover:text-white">Demo</Link>
-                    <button className="rounded-lg bg-fuschia-500 px-3 py-2 text-sm font-semibold text-neutral-900 hover:bg-fuschia-400 transition">Sign in</button>
+                    <Link
+                    href="/signup"
+                    className="rounded-lg bg-fuchsia-500 px-3 py-2 font-semibold text-neutral-900 hover:bg-fuchsia-400 transition"
+                    >
+                    Sign up
+                    </Link>
                 </nav>
             </div>
         </header>
